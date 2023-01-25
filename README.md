@@ -1,1 +1,1 @@
-# unit2-boiler
+I am planning to make a festival app, based on adding, editing, and deleting sets or performances. To have name of the act, time, and stage. For long term goals I want to see if I could add a login and sign up feature. Also want to have a tab so you could load up the map of the festival. FAQ for the fest goers and the tickets section to buy if they dont already. Thats my goal because it is something that I could see myself doing in the long term working for a festival.
