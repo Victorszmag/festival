@@ -47,6 +47,7 @@ app.use((req, res, next) => {
 
 // Allow express to use urlencoded
 app.use(express.urlencoded({ extended: true }));
+//used to help with postman and creating api
 app.use(express.json());
 /**
  * View engine
@@ -58,6 +59,7 @@ app.engine("jsx", require("jsx-view-engine").createEngine());
  */
 
 app.use("/festivals", festivalController);
+
 
 
   

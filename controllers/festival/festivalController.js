@@ -4,6 +4,23 @@ const router = express.Router();
 // Data controller
 const dataController = require("./dataController");
 const viewController = require("./viewController");
+const apiController = require("./apiController");
+//Index api
+router.get("/api", dataController.index, apiController.index);
+// Show api
+router.get("/api/:id", dataController.show, apiController.show);
+//delete api
+router.get("/api/:id", dataController.destroy, apiController.show);
+//Update api
+router.get("/api/:id", dataController.update, apiController.show);
+//creste api
+router.get("/api/", dataController.create, apiController.show);
+
+
+
+
+
+
 
 // Index
 router.get("/", dataController.index, viewController.index);
