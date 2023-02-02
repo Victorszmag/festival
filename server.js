@@ -15,7 +15,7 @@ const PORT = 3000;
  * Controllers
  */
 const festivalController = require("./controllers/festival/festivalController");
-
+const userController = require("./controllers/user/userController");
 
 //connect to database
 const db = require("./db");
@@ -59,6 +59,7 @@ app.engine("jsx", require("jsx-view-engine").createEngine());
  */
 
 app.use("/festivals", festivalController);
+app.use("/user", userController);
 
 
 
