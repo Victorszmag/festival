@@ -9,6 +9,9 @@ class Index extends React.Component {
       <DefaultLayout title="Some Festival" cssPath="/css/app.css">
         <nav>
           <a href="/festivals/new">Add an Act to your planner</a>
+          <a href="/user/logout">
+            <button className="logoutBtn">Logout</button>
+          </a>
         </nav>
         <ul>
           {this.props.festivals.map((festival, i) => {

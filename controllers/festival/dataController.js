@@ -2,7 +2,7 @@ const Festival = require("../../models/festivals");
 
 const dataController = {
   index(req, res, next) {
-    Festival.find({}, (error, allFestivals) => {
+    Festival.find({username: req.session.username}, (error, allFestivals) => {
       if (error) {
         res.status(404).send({
           msg: error.message,
@@ -15,6 +15,8 @@ const dataController = {
   },
   create(req, res, next) {
     req.body.readyToSee = req.body.readyToSee === "on" ? true : false;
+
+    req.body.username = req.session.username;
     // Use Model to create artists
     Festival.create(req.body, (error, createdFestival) => {
       // Once created - respond to client

@@ -5,6 +5,7 @@ const festivalSchema = new mongoose.Schema({
   when: { type: String, required: true },
   where: { type: String, required: true },
   readyToSee: { type: Boolean, default: false },
+  username:{type: String},
 });
 
 const Festival = mongoose.model("Festival", festivalSchema);

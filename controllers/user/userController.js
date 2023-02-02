@@ -1,12 +1,19 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+
 
 const User = require("../../models/user");
+router.get("/signup", (req, res) => {
+    res.render("user/Signup");
+  });
+  
+  router.get("/login", (req, res) => {
+    res.render("user/Login");
+  });
 
 router.post("/signup", async (req, res) => {
-  const { name, password } = req.body;
+  const { username, password } = req.body;
 
   try {
     // hash the password that we recieve
@@ -14,9 +21,12 @@ router.post("/signup", async (req, res) => {
       password,
       await bcrypt.genSalt(10)
     );
-    const createdUser = await User.create({ name, password: hashedPassword });
+    const createdUser = await User.create({
+        username,
+        password: hashedPassword,
+      });
     console.log(createdUser);
-    res.json({ hashedPassword });
+    res.redirect("/user/login");
   } catch (error) {
     console.log(error);
     res.status(500).send(error);
@@ -24,22 +34,20 @@ router.post("/signup", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  const { name, password } = req.body;
+  const { username, password } = req.body;
   try {
     // Find the user by their name
-    const foundUser = await User.findOne({ name });
+    const foundUser = await User.findOne({ username });
     // Compare the sent password with the hashed one
     const result = await bcrypt.compare(password, foundUser.password);
 
-    console.log(result);
+    
 
     if (result) {
-      // generate JWT & Send back
-      const token = jwt.sign(
-        { name: foundUser.name, _id: foundUser._id },
-        process.env.SECRET
-      );
-      res.status(200).json({ token });
+        req.session.username = foundUser.username;
+        req.session.loggedIn = true;
+  
+        res.redirect("/festivals");
     } else {
       // error if password doesn't match
       res.json({ error: "password doesn't match" });
@@ -49,5 +57,12 @@ router.post("/login", async (req, res) => {
     res.status(500).send(error);
   }
 });
+router.get("/logout", (req, res) => {
+    req.session.destroy((err) => {
+      console.error(err);
+      res.redirect("/");
+    });
+  });
+  
 
 module.exports = router;
