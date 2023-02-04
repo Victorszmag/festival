@@ -36,6 +36,25 @@ class Index extends React.Component {
             );
           })}
         </ul>
+        <footer>
+        <a href="https://festivalviewer.com/img/2022TMLMAP.jpg">
+            <button className="mapbtn">MAP</button>
+          </a>
+          <a href="https://edm.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_620/MTk1NDkyNDIxNDM2NDUwMzcz/326377466_897002361735233_2908909092337216385_n.webp">
+            <button className="lineupbtn">Lineup</button>
+          </a>
+
+          <a href="https://www.tomorrowland.com/en/faq-contact">
+            <button className="faqBtn">F.A.Q.</button>
+          </a>
+          <a href="https://www.tomorrowland.com/en/festival/tickets">
+            <button className="ticketbtn">Buy Tickets</button>
+          </a>
+
+
+
+        </footer>
+        
       </DefaultLayout>
     );
   }

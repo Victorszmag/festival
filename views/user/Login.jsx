@@ -1,10 +1,12 @@
 const React = require("react");
+const DefaultLayout = require("../layout/Default");
 
 class Login extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Login</h1>
+        <DefaultLayout title="Login Page" cssPath="/css/app.css">
+      
+        
         <a href="/user/signup">
           <h3>Signup</h3>
         </a>
@@ -15,7 +17,8 @@ class Login extends React.Component {
           <input type="password" defaultValue="" name="password" required />
           <input type="submit" name="" value="Login" />
         </form>
-      </div>
+      
+      </DefaultLayout>
     );
   }
 }
