@@ -4,7 +4,7 @@ I am planning to make a festival app, based on adding, editing, and deleting set
 Tech used : js/jsx/css/Node/Express/MongoDB/jwebstolken/morgan/bcrypt
 Link to photos of the app and ERD/ routes https://imgur.com/a/Jz6HaBe
 Trello board : https://trello.com/b/ZgixOTyF/victor-project
-Website: https://git.heroku.com/festival.git
+Website: https://festival.herokuapp.com/user/login 
 Next Steps: 
 1. I wish to have add my own fake map/lineup/FAQ on a website that shows the stages
 2. Make the app work offline/ with limited data due to festival enviroment
