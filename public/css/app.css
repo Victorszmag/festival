@@ -1,14 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 body {
-  background: url(https://digwallpapers.com/cdn-cgi/image/width=1600,quality=40,format=auto/wallpapers/full/a/b/c/12764-2362x1575-music-festival-wallpaper-photo-desktop-hd.jpg);
+  background-color: tan;
   margin: 0;
   font-family: "Regular", bold;
+}
+header {
+  background-color: grey;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: grey;
+}
+
+nav button {
+  font-size: 16px;
+  color: #333;
+  background-color: grey;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  
+}
+
+nav button:hover {
+  background-color: #333;
+  color: #f5f5f5;
 }
 
 h1 {
   font-family: "Regular", bold;
-  background-image: url("http://cdn.shopify.com/s/files/1/0385/6229/files/banner_19e5b09e-2892-4a2a-b7ed-48cddf4502c3.png?v=1493161972");
+  background-color: grey;
+  margin: 0;
+  margin-bottom: 0.5em;
+  padding: 2em;
+  text-align: center;
+  color:white;
+}
+h2 {
+  font-family: "Regular", bold;
+  background-color: grey;
   margin: 0;
   margin-bottom: 0.5em;
   padding: 2em;
@@ -35,7 +71,7 @@ li {
 }
 
 li a {
-  color: mediumseagreen;
+  color: mediumseabreen;
 }
 
 input[type="text"] {
@@ -46,7 +82,7 @@ input[type="text"] {
 input[type="submit"] {
   padding: 0.3em;
   color: black;
-  background: rgb(4, 255, 0);
+  background: #007bff;
   font-size: 1em;
   border-radius: 10%;
 }
@@ -60,8 +96,123 @@ input[type="submit"]:hover {
     margin-bottom: auto;
 }
 .faqBtn {
-    margin-bottom: 32px;
+    
 }
 .ticketBtn{
     margin-bottom: 32px;
+}
+.signup-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin: 10px 0;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0 0 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0062cc;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.signup-link {
+  margin-bottom: 1em;
+}
+
+.signup-link a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+}
+
+.login-form button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+footer {
+  background-color: #f5f5f5;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.add-planner-link {
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.add-planner-link:hover {
+  background-color: #0062cc;
 }

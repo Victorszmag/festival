@@ -17,6 +17,8 @@ const viewController = {
   newView(req, res) {
     res.render("festivals/New");
   },
+
+ 
   //home redirect
   redirectHome(req, res) {
     res.redirect(RESOURCE_PATH);
