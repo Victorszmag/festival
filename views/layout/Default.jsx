@@ -8,16 +8,16 @@ class DefaultLayout extends React.Component {
         <head>
           <nav>
             <h1>Tommorowland</h1>
-          <a href="https://festivalviewer.com/img/2022TMLMAP.jpg">
+          <a href="/Map">
             <button className="mapbtn">MAP</button>
           </a>
-          <a href="https://edm.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_620/MTk1NDkyNDIxNDM2NDUwMzcz/326377466_897002361735233_2908909092337216385_n.webp">
+          <a href="/Lineup">
             <button className="lineupbtn">Lineup</button>
           </a>
-           <a href="https://www.tomorrowland.com/en/faq-contact">
+           <a href="/FAQ">
             <button className="faqBtn">FAQ</button>
           </a>
-          <a href="https://www.tomorrowland.com/en/festival/tickets">
+          <a href="/BuyTickets">
             <button className="ticketbtn">Buy Tickets</button>
           </a>
           </nav>
